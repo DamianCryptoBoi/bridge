@@ -32,9 +32,7 @@ module.exports = {
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/8918959b567c47418752523f7b91a9cc",
-      accounts: [
-        "a6bd9fa520a4bc25f40baac061f038188db7b1f16703493f5dd5453bfb399dff",
-      ],
+      accounts: [process.env.PRIVATE_KEY],
       gas: 12000000,
       blockGasLimit: 0x1fffffffffffff,
       allowUnlimitedContractSize: true,
@@ -53,15 +51,25 @@ module.exports = {
       gas: 120000000,
       // gasPrice: 225000000000,
       chainId: 43113,
-      accounts: [
-        "a6bd9fa520a4bc25f40baac061f038188db7b1f16703493f5dd5453bfb399dff",
-      ],
+      accounts: [process.env.PRIVATE_KEY],
     },
     avalanche: {
       url: "https://api.avax.network/ext/bc/C/rpc",
 
       chainId: 43114,
       accounts: [],
+    },
+
+    bsc: {
+      url: "https://bsc-dataseed.binance.org/",
+      chainId: 56,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+
+    bscTestnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+      chainId: 97,
+      accounts: [process.env.PRIVATE_KEY],
     },
 
     fantomOpera: {
@@ -73,9 +81,7 @@ module.exports = {
     fantomTest: {
       url: "https://rpc.testnet.fantom.network",
       chainId: 4002,
-      accounts: [
-        "a6bd9fa520a4bc25f40baac061f038188db7b1f16703493f5dd5453bfb399dff",
-      ],
+      accounts: [process.env.PRIVATE_KEY],
       blockGasLimit: 10000000000,
       // gas: 2100000,
       // gasPrice: 8000000000,
@@ -86,6 +92,7 @@ module.exports = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    // apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: "H4YF35NDBWQMKCCRW2XMYFQ56JWKC4H7DG", //  bscscan
   },
 };
